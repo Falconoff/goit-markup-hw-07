@@ -124,7 +124,7 @@ img {
 }
 
 /* ============== header ============= */
-header {
+.header {
   border-bottom: 1px solid #ececec;
 }
 
@@ -268,11 +268,11 @@ header {
 }
 
 /* ============ features =============== */
-.features {
+.features-section {
   padding-bottom: 47px;
 }
 
-.features__list {
+.features {
   display: flex;
 }
 
@@ -315,13 +315,13 @@ header {
 }
 
 /* ============== work ================== */
-.works {
+.works-section {
   padding-top: 47px;
 }
 
 /* позиционирование в сетке
  отрицательными маржинами */
-.works__list {
+.works {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
@@ -354,11 +354,11 @@ header {
 }
 
 /* ============= our team =============== */
-.members {
+.members-section {
   background-color: var(--bg-our-team);
 }
 
-.members__list {
+.members-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
@@ -474,7 +474,7 @@ header {
 }
 
 /* ============ footer ================ */
-footer {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 
@@ -544,7 +544,7 @@ footer {
 
 /* form for spam)) */
 
-.spam-email {
+.spam__email-input {
   height: 50px;
   width: 358px;
 
@@ -560,7 +560,7 @@ footer {
   transition: border-color var(--trans-duration) var(--timing-function);
 }
 
-.spam-title {
+.spam__title {
   display: block;
   margin-bottom: 20px;
 
@@ -568,7 +568,7 @@ footer {
   text-transform: uppercase;
 }
 
-.spam-form-btn {
+.spam__btn {
   border-radius: 4px;
   border: none;
 
@@ -586,18 +586,18 @@ footer {
   transition: background-color var(--trans-duration) var(--timing-function);
 }
 
-.spam-icon {
+.spam__icon {
   vertical-align: middle;
   margin-left: 12px;
   fill: var(--white-color);
 }
 
-.spam-form-btn:hover,
-.spam-form-btn:focus {
+.spam__btn:hover,
+.spam__btn:focus {
   background-color: var(--btn-hover);
 }
 
-.spam-form:focus-within .spam-email {
+.spam__form:focus-within .spam__email-input {
   outline: none;
   border-color: var(--accent-color);
 }
@@ -605,17 +605,17 @@ footer {
 /* =============== portfolio ================== */
 
 /* portfolio filter */
-.portfolio .filter {
+.portfolio-filter {
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
 
-.filter .item:not(:last-child) {
+.portfolio-filter__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.portfolio .filter-button {
+.portfolio-filter__btn {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -628,8 +628,8 @@ footer {
   transition-timing-function: var(--timing-function);
 }
 
-.portfolio .filter-button:hover,
-.portfolio .filter-button:focus {
+.portfolio-filter__btn:hover,
+.portfolio-filter__btn:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -638,17 +638,17 @@ footer {
 
 /* portfolio gallery */
 
-.gallery {
+.portfolio-gallery {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -30px;
 }
 
-.gallery-item:not(:nth-child(3n)) {
+.portfolio-gallery__item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 
-.gallery-item {
+.portfolio-gallery__item {
   position: relative;
 
   margin-bottom: 30px;
@@ -660,19 +660,19 @@ footer {
   transition: box-shadow var(--trans-duration) var(--timing-function);
 }
 
-.gallery .card:hover,
-.gallery .card:focus {
+.card:hover,
+.card:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.card .box {
+.card__box {
   position: relative;
 
   overflow: hidden;
 }
 
-.card-overlay {
+.card__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -692,18 +692,18 @@ footer {
   transition: transform var(--trans-duration) var(--timing-function);
 }
 
-.gallery .card:hover .card-overlay,
-.gallery .card:focus .card-overlay {
+.card:hover .card__overlay,
+.card:focus .card__overlay {
   transform: translateY(0);
 }
 
-.card-title {
+.card__title {
   padding: 20px 24px;
   border: 1px solid var(--brd-card-title);
   border-top: 0;
 }
 
-.card .card-name {
+.card__name {
   margin-bottom: 4px;
 
   font-weight: 700;
@@ -713,7 +713,7 @@ footer {
   color: var(--main-color);
 }
 
-.card .card-text {
+.card__text {
   font-size: 16px;
   line-height: 1.87;
   color: var(--second-color);
@@ -736,7 +736,7 @@ footer {
   transition: var(--trans-duration) var(--timing-function);
 }
 
-.is-hidden {
+.backdrop--is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -758,7 +758,7 @@ footer {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.modal-close-btn {
+.modal__close-btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -777,19 +777,19 @@ footer {
   cursor: pointer;
 }
 
-.close-icon {
+.close-btn__icon {
   fill: var(--main-color);
   transition: fill var(--trans-duration) var(--timing-function);
 }
 
-.modal-close-btn:hover .close-icon,
-.modal-close-btn:focus .close-icon {
+.close-btn:hover .close-btn__icon,
+.close-btn:focus .close-btn__icon {
   fill: var(--accent-color);
 }
 
 /* --------- modal form ------------ */
 
-.modal-title {
+.modal__title {
   margin-bottom: 30px;
 
   font-weight: 700;
@@ -799,27 +799,27 @@ footer {
   color: var(--main-color);
 }
 
-.form-field {
+.form__field {
   position: relative;
   display: block;
 
   margin-bottom: 28px;
 }
 
-.form-field:last-child {
+.form__field:last-child {
   margin-bottom: 20px;
 }
 
-.form-field:focus-within .form-icon {
+.form__field:focus-within .form__icon {
   fill: var(--accent-color);
 }
 
-.form-field:focus-within .form-input {
+.form__field:focus-within .form__input {
   outline: none;
   border-color: var(--accent-color);
 }
 
-.form-input {
+.form__input {
   display: block;
   width: 100%;
   height: 40px;
@@ -837,11 +837,11 @@ footer {
   transition: border-color var(--trans-duration) var(--timing-function);
 }
 
-.form-input::placeholder {
+.form__input::placeholder {
   color: var(--placeholder-text-color);
 }
 
-textarea.form-input {
+.form__textarea {
   resize: none;
   height: 120px;
 
@@ -849,7 +849,7 @@ textarea.form-input {
   overflow: auto;
 }
 
-.form-label {
+.form__label {
   position: absolute;
   bottom: calc(100% + 4px);
 
@@ -859,7 +859,7 @@ textarea.form-input {
   color: var(--second-color);
 }
 
-.form-icon {
+.form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -878,7 +878,7 @@ textarea.form-input {
   color: var(--accent-color);
 }
 
-.agreement-icon {
+.agreement__icon {
   vertical-align: middle;
   width: 16px;
   height: 15px;
@@ -893,11 +893,11 @@ textarea.form-input {
   transition-timing-function: var(--timing-function);
 }
 
-.agreement input[type='checkbox']:focus + .agreement-icon {
+.agreement__checkbox:focus + .agreement__icon {
   border-color: var(--accent-color);
 }
 
-.agreement input[type='checkbox']:checked + .agreement-icon {
+.agreement__checkbox:checked + .agreement__icon {
   background-color: var(--accent-color);
   border: none;
 }
