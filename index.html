@@ -16,7 +16,7 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
@@ -78,7 +78,7 @@
       <!-- hero-section -->
       <section class="hero">
         <h1 class="hero__title">Эффективные решения<br />для вашего бизнеса</h1>
-        <button class="btn hero__btn" type="button" data-modal-open>
+        <button class="btn btn--centered" type="button" data-modal-open>
           Заказать услугу
         </button>
       </section>
@@ -521,7 +521,7 @@
                 title="Напишите свой ящик, чтоб получать рассылку"
                 required
               />
-              <button class="spam__btn" type="submit">
+              <button class="btn spam__btn" type="submit">
                 <span>Подписаться</span
                 ><svg class="spam__icon" width="24" height="24">
                   <use href="./images/icons.svg#send"></use>
@@ -534,7 +534,7 @@
     </footer>
 
     <!-- modal window -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button
           class="close-btn modal__close-btn"
@@ -621,7 +621,7 @@
             </label>
             <a href="">Условия договора</a>
           </div>
-          <button class="btn-submit" type="submit">Отправить</button>
+          <button class="btn btn--centered" type="submit">Отправить</button>
         </form>
       </div>
     </div>
