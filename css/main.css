@@ -11,7 +11,7 @@
   --brd-card-title: #eeeeee;
   --icon-color: #afb1b8;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --trans-duration: 500ms;
+  --trans-duration: 250ms;
   --placeholder-text-color: rgba(117, 117, 117, 0.5);
   --footer-form-border: rgba(255, 255, 255, 0.3);
 }
