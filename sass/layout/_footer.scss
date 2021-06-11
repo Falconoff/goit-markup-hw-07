@@ -4,6 +4,10 @@
 
   background-color: var(--bg-dark);
   color: var(--white-color);
+
+  &__logo {
+    margin-bottom: 20px;
+  }
 }
 
 .flex-wrap {
@@ -12,32 +16,28 @@
   justify-content: space-between;
 }
 
-.footer__logo {
-  margin-bottom: 20px;
-}
-
 .address {
   font-style: normal;
-}
 
-.address__item:not(:last-child) {
-  padding-bottom: 9px;
-}
+  &__item:not(:last-child) {
+    padding-bottom: 9px;
+  }
 
-.address__link {
-  line-height: 1.71;
-  color: var(--white-color);
+  &__link {
+    line-height: 1.71;
+    color: var(--white-color);
 
-  transition: color var(--trans-duration) var(--timing-function);
-}
+    transition: color var(--trans-duration) var(--timing-function);
 
-.address__link--gray {
-  color: rgba(255, 255, 255, 0.6);
-}
+    &--gray {
+      color: rgba(255, 255, 255, 0.6);
+    }
 
-.address__link:focus,
-.address__link:hover {
-  color: var(--accent-color);
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
 }
 
 /* join-block with social links */
@@ -51,37 +51,39 @@
 
 /* form for spam)) */
 
-.spam__email-input {
-  height: 50px;
-  width: 358px;
+.spam {
+  &__email-input {
+    height: 50px;
+    width: 358px;
 
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-right: 12px;
-  border-radius: 4px;
-  border: 1px solid var(--footer-form-border);
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-right: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--footer-form-border);
 
-  color: var(--white-color);
+    color: var(--white-color);
 
-  background-color: inherit;
-  transition: border-color var(--trans-duration) var(--timing-function);
-}
+    background-color: inherit;
+    transition: border-color var(--trans-duration) var(--timing-function);
 
-.spam__title {
-  display: block;
-  margin-bottom: 20px;
+    .spam__form:focus-within & {
+      outline: none;
+      border-color: var(--accent-color);
+    }
+  }
 
-  font-weight: 700;
-  text-transform: uppercase;
-}
+  &__title {
+    display: block;
+    margin-bottom: 20px;
 
-.spam__icon {
-  vertical-align: middle;
-  margin-left: 12px;
-  fill: var(--white-color);
-}
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 
-.spam__form:focus-within .spam__email-input {
-  outline: none;
-  border-color: var(--accent-color);
+  &__icon {
+    vertical-align: middle;
+    margin-left: 12px;
+    fill: var(--white-color);
+  }
 }

@@ -3,19 +3,10 @@
   display: block;
 
   margin-bottom: 28px;
-}
 
-.form__field:last-child {
-  margin-bottom: 20px;
-}
-
-.form__field:focus-within .form__icon {
-  fill: var(--accent-color);
-}
-
-.form__field:focus-within .form__input {
-  outline: none;
-  border-color: var(--accent-color);
+  &:last-child {
+    margin-bottom: 20px;
+  }
 }
 
 .form__input {
@@ -34,10 +25,15 @@
 
   background-color: #fff;
   transition: border-color var(--trans-duration) var(--timing-function);
-}
 
-.form__input::placeholder {
-  color: var(--placeholder-text-color);
+  .form__field:focus-within & {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+
+  &::placeholder {
+    color: var(--placeholder-text-color);
+  }
 }
 
 .form__textarea {
@@ -65,6 +61,10 @@
   transform: translateY(-50%);
   fill: var(--main-color);
   transition: fill var(--trans-duration) var(--timing-function);
+
+  .form__field:focus-within & {
+    fill: var(--accent-color);
+  }
 }
 
 .agreement {
@@ -72,33 +72,33 @@
 
   text-align: center;
   color: var(--second-color);
-}
 
-.agreement a {
-  text-decoration: underline;
-  color: var(--accent-color);
-}
+  &__link {
+    text-decoration: underline;
+    color: var(--accent-color);
+  }
 
-.agreement__icon {
-  vertical-align: middle;
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--main-color);
-  border-radius: 2px;
-  margin-right: 5px;
+  &__icon {
+    vertical-align: middle;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    margin-right: 5px;
 
-  fill: var(--white-color);
-  background-color: var(--white-color);
-  transition-property: border-color;
-  transition-duration: var(--trans-duration);
-  transition-timing-function: var(--timing-function);
-}
+    fill: var(--white-color);
+    background-color: var(--white-color);
+    transition-property: border-color;
+    transition-duration: var(--trans-duration);
+    transition-timing-function: var(--timing-function);
 
-.agreement__checkbox:focus + .agreement__icon {
-  border-color: var(--accent-color);
-}
+    .agreement__checkbox:focus + & {
+      border-color: var(--accent-color);
+    }
 
-.agreement__checkbox:checked + .agreement__icon {
-  background-color: var(--accent-color);
-  border: none;
+    .agreement__checkbox:checked + & {
+      background-color: var(--accent-color);
+      border: none;
+    }
+  }
 }

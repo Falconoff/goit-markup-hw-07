@@ -9,17 +9,17 @@
 
   transform: scale(1);
   transition: transform var(--trans-duration) var(--timing-function);
-}
 
-.logo--dark-theme {
-  color: var(--main-color);
-}
+  &--dark-theme {
+    color: var(--main-color);
+  }
 
-.logo--light-theme {
-  color: var(--white-color);
-}
+  &--light-theme {
+    color: var(--white-color);
+  }
 
-.logo:hover,
-.logo:focus {
-  transform: scale(1.2);
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
 }

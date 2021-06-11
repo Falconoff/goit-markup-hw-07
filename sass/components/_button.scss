@@ -18,15 +18,15 @@
 
   cursor: pointer;
   transition: background-color var(--trans-duration) var(--timing-function);
-}
 
-.btn--centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  &--centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-.btn:hover,
-.btn:focus {
-  background-color: var(--btn-hover);
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover);
+  }
 }
